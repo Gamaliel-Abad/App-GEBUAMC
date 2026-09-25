@@ -4,7 +4,7 @@ import { canciones } from "@/canciones";
 
 // ═══════════════════════════════════════════════
 // CAMBIA EL TÍTULO DE LA ENSEÑANZA AQUÍ:
-const ENSENANZA_TITULO = "Perdona pensando en Cristo";
+const ENSENANZA_TITULO = "¿El evangelio se vive ganando o perdiendo?";
 const ENSENANZA_REFERENCIA = "Mateo 13:1-23";
 const ENSENANZA_FECHA = "Trimestre 26-O — Semana Actual";
 // ═══════════════════════════════════════════════
@@ -12,7 +12,7 @@ const ENSENANZA_FECHA = "Trimestre 26-O — Semana Actual";
 // ═══════════════════════════════════════════════
 // PON LOS 3 CANTOS AQUÍ (por su ID del cancionero):
 
-const CANTOS_SEMANA = ["5", "11", "13"];
+const CANTOS_SEMANA = ["5", "11", "11"];
 // ═══════════════════════════════════════════════
 
 const cantosSeleccionados = CANTOS_SEMANA.map(
