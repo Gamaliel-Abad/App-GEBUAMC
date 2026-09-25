@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #fef7ed;
+  --color-cream-dark: #fdf2e3;
+  --color-navy: #1a2744;
+  --color-navy-light: #2a3f6a;
+  --color-geb-orange: #f27a1a;
+  --color-geb-orange-light: #fb9a3f;
+  --color-geb-orange-dark: #d96a10;
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
