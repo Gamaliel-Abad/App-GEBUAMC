@@ -5,7 +5,7 @@ import { canciones } from "@/canciones";
 // ═══════════════════════════════════════════════
 // CAMBIA EL TÍTULO DE LA ENSEÑANZA AQUÍ:
 const ENSENANZA_TITULO = "¿El evangelio se vive ganando o perdiendo?";
-const ENSENANZA_REFERENCIA = "Mateo 13:1-23";
+const ENSENANZA_REFERENCIA = "Mateo 18:23-35";
 const ENSENANZA_FECHA = "Trimestre 26-O — Semana Actual";
 // ═══════════════════════════════════════════════
 
