@@ -4,7 +4,7 @@ import { canciones } from "@/canciones";
 
 // ═══════════════════════════════════════════════
 // CAMBIA EL TÍTULO DE LA ENSEÑANZA AQUÍ:
-const ENSENANZA_TITULO = "Perdon y gloria";
+const ENSENANZA_TITULO = "Perdona pensando en Cristo";
 const ENSENANZA_REFERENCIA = "Mateo 13:1-23";
 const ENSENANZA_FECHA = "Trimestre 26-O — Semana Actual";
 // ═══════════════════════════════════════════════
