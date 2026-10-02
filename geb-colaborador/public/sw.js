@@ -1,10 +1,6 @@
 const CACHE_NAME = "geb-v1";
-const urlsToCache = ["/", "/geb-logo.png"];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
-  );
   self.skipWaiting();
 });
 
@@ -22,18 +18,28 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  const { request } = event;
+  if (request.method !== "GET") return;
+
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) return response;
-      return fetch(event.request).then((networkResponse) => {
+    fetch(request)
+      .then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {
           const clone = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, clone);
+            cache.put(request, clone);
           });
         }
         return networkResponse;
-      });
-    })
+      })
+      .catch(() => {
+        return caches.match(request).then((cached) => {
+          if (cached) return cached;
+          if (request.mode === "navigate") {
+            return caches.match("/");
+          }
+          return new Response("Offline", { status: 503 });
+        });
+      })
   );
 });

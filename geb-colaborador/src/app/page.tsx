@@ -1,18 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { canciones } from "@/canciones";
+import BotonInstalar from "./boton-instalar";
 
 // ═══════════════════════════════════════════════
 // CAMBIA EL TÍTULO DE LA ENSEÑANZA AQUÍ:
-const ENSENANZA_TITULO = "¿El evangelio se vive ganando o perdiendo?";
-const ENSENANZA_REFERENCIA = "Mateo 18:23-35";
+const ENSENANZA_TITULO = "Perdon y gloria";
+const ENSENANZA_REFERENCIA = "Mateo 13:1-23";
 const ENSENANZA_FECHA = "Trimestre 26-O — Semana Actual";
 // ═══════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════
 // PON LOS 3 CANTOS AQUÍ (por su ID del cancionero):
 
-const CANTOS_SEMANA = ["5", "11", "11"];
+const CANTOS_SEMANA = ["5", "11", "13"];
 // ═══════════════════════════════════════════════
 
 const cantosSeleccionados = CANTOS_SEMANA.map(
@@ -109,16 +110,27 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/declaracion"
+          href="/biblioteca"
           className="flex flex-col items-center justify-center w-full bg-geb-orange-dark hover:bg-geb-orange text-white font-bold py-7 px-6 rounded-3xl shadow-lg hover:shadow-xl transition-all active:scale-[0.97] text-lg text-center gap-2"
+        >
+          <span className="text-3xl">📚</span>
+          Biblioteca
+        </Link>
+
+        <Link
+          href="/declaracion"
+          className="flex flex-col items-center justify-center w-full bg-navy-light hover:bg-navy text-white font-bold py-7 px-6 rounded-3xl shadow-lg hover:shadow-xl transition-all active:scale-[0.97] text-lg text-center gap-2"
         >
           <span className="text-3xl">📖</span>
           Declaración de Fe
         </Link>
       </main>
 
-      <footer className="mt-12 mb-6 text-xs text-navy/40 text-center">
-        GEBUAMC · Trimestre 26-O
+      <footer className="mt-12 mb-6 flex flex-col items-center gap-4">
+        <BotonInstalar />
+        <span className="text-xs text-navy/40 text-center">
+          GEBUAMC · Trimestre 26-O
+        </span>
       </footer>
     </div>
   );
