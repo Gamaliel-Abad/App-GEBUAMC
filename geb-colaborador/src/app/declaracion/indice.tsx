@@ -31,16 +31,16 @@ export default function IndiceDesplegable({
 
   return (
     <div className="sticky top-[60px] z-20 shrink-0">
-      <div className="bg-white border-b border-navy/10 shadow-md">
+      <div className="bg-surface border-b border-border shadow-md">
         <button
           onClick={() => setAbierto(!abierto)}
-          className="w-full flex items-center justify-between px-4 py-4 text-left cursor-pointer select-none active:bg-navy/5"
+          className="w-full flex items-center justify-between px-4 py-4 text-left cursor-pointer select-none active:bg-surface-muted"
         >
-          <span className="font-bold text-navy text-base">
+          <span className="font-bold text-ink text-base">
             📑 Índice
           </span>
           <span
-            className={`text-navy/50 font-bold text-base transition-transform ${abierto ? "rotate-180" : ""}`}
+            className={`text-ink-muted font-bold text-base transition-transform ${abierto ? "rotate-180" : ""}`}
           >
             ▼
           </span>
@@ -61,9 +61,9 @@ export default function IndiceDesplegable({
                           <a
                             href={`#${sec.id}`}
                             onClick={() => setAbierto(false)}
-                            className="text-sm text-navy/70 hover:text-geb-orange hover:bg-geb-orange/5 transition-all py-1.5 px-3 block rounded-lg"
+                            className="text-sm text-ink-2 hover:text-geb-orange hover:bg-geb-orange/5 transition-all py-1.5 px-3 block rounded-lg"
                           >
-                            <span className="text-navy/30 font-mono text-xs mr-2">
+                            <span className="text-ink-faint font-mono text-xs mr-2">
                               {i + 1}.
                             </span>
                             {sec.titulo}

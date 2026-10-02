@@ -4,8 +4,8 @@ import IndiceDesplegable from "./indice";
 
 export default function DeclaracionPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-cream">
-      <header className="sticky top-0 z-30 bg-navy px-4 py-4 shadow-md">
+    <div className="min-h-screen flex flex-col bg-bg">
+      <header className="sticky top-0 z-30 bg-header-bg px-4 py-4 shadow-md">
         <div className="max-w-lg mx-auto flex items-center gap-3">
           <Link
             href="/"
@@ -25,14 +25,14 @@ export default function DeclaracionPage() {
       <main className="flex-1 w-full max-w-lg mx-auto px-4 py-4 flex flex-col gap-5 shrink-0">
         {secciones.map((sec) => (
           <section key={sec.id} id={sec.id} className="scroll-mt-[120px]">
-            <div className="bg-white rounded-2xl shadow-sm border border-navy/10 overflow-hidden">
-              <div className="bg-navy/5 border-b border-navy/10 px-4 py-3">
-                <h2 className="text-sm font-bold text-navy leading-snug">
+            <div className="bg-surface rounded-2xl shadow-sm border border-border overflow-hidden">
+              <div className="bg-surface-muted border-b border-border px-4 py-3">
+                <h2 className="text-sm font-bold text-ink leading-snug">
                   {sec.titulo}
                 </h2>
               </div>
               <div className="px-4 py-4">
-                <div className="text-sm leading-relaxed text-navy/70 whitespace-pre-line">
+                <div className="text-sm leading-relaxed text-ink-2 whitespace-pre-line">
                   {sec.contenido}
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function DeclaracionPage() {
         </div>
       </main>
 
-      <footer className="py-4 text-center text-xs text-navy/40">
+      <footer className="py-4 text-center text-xs text-ink-faint">
         GEBUAMC · Trimestre 26-O
       </footer>
     </div>

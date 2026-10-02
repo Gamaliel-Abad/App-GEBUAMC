@@ -5,15 +5,15 @@ import BotonInstalar from "./boton-instalar";
 
 // ═══════════════════════════════════════════════
 // CAMBIA EL TÍTULO DE LA ENSEÑANZA AQUÍ:
-const ENSENANZA_TITULO = "Perdon y gloria";
-const ENSENANZA_REFERENCIA = "Mateo 13:1-23";
+const ENSENANZA_TITULO = "Confía en el Rey";
+const ENSENANZA_REFERENCIA = "Mateo 13:24-30";
 const ENSENANZA_FECHA = "Trimestre 26-O — Semana Actual";
 // ═══════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════
 // PON LOS 3 CANTOS AQUÍ (por su ID del cancionero):
 
-const CANTOS_SEMANA = ["5", "11", "13"];
+const CANTOS_SEMANA = ["3", "4", "10"];
 // ═══════════════════════════════════════════════
 
 const cantosSeleccionados = CANTOS_SEMANA.map(
@@ -22,7 +22,7 @@ const cantosSeleccionados = CANTOS_SEMANA.map(
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-[#fffcf7] px-4 py-10">
+    <div className="min-h-screen flex flex-col items-center bg-bg px-4 py-10">
       <header className="flex flex-col items-center mb-8">
         <Image
           src="/geb-logo.png"
@@ -32,57 +32,57 @@ export default function Home() {
           priority
           className="w-44 h-auto sm:w-52"
         />
-        <h1 className="mt-4 text-2xl sm:text-3xl font-bold text-navy text-center">
+        <h1 className="mt-4 text-2xl sm:text-3xl font-bold text-ink text-center">
           GEBUAMC App
         </h1>
-        <p className="mt-1 text-sm text-navy/50 text-center">
+        <p className="mt-1 text-sm text-ink-muted text-center">
           Trimestre 26-O
         </p>
       </header>
 
       <main className="w-full max-w-sm flex flex-col gap-4">
         {/* Enseñanza de la semana */}
-        <div className="bg-white rounded-2xl shadow-sm border border-navy/10 px-4 py-4">
+        <div className="bg-surface rounded-2xl shadow-sm border border-border px-4 py-4">
           <span className="text-[10px] font-bold text-geb-orange uppercase tracking-wide">
             Enseñanza
           </span>
-          <h2 className="mt-1 text-lg font-bold text-navy leading-snug">
+          <h2 className="mt-1 text-lg font-bold text-ink leading-snug">
             {ENSENANZA_TITULO}
           </h2>
-          <p className="text-xs text-navy/50 mt-1">
+          <p className="text-xs text-ink-muted mt-1">
             {ENSENANZA_REFERENCIA} · {ENSENANZA_FECHA}
           </p>
         </div>
 
         {/* Cantos de la semana */}
         {cantosSeleccionados.length > 0 && (
-          <div className="bg-white rounded-2xl shadow-sm border border-navy/10 overflow-hidden">
-            <div className="px-4 py-3 border-b border-navy/10">
+          <div className="bg-surface rounded-2xl shadow-sm border border-border overflow-hidden">
+            <div className="px-4 py-3 border-b border-border">
               <span className="text-[10px] font-bold text-geb-orange uppercase tracking-wide">
                 Cantos para hoy
               </span>
             </div>
-            <div className="flex flex-col divide-y divide-navy/5">
+            <div className="flex flex-col divide-y divide-border">
               {cantosSeleccionados.map(
                 (c) =>
                   c && (
                     <Link
                       key={c.id}
                       href={`/cancionero/${c.id}`}
-                      className="flex items-center gap-3 px-4 py-3 hover:bg-navy/5 transition-colors"
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-surface-muted transition-colors"
                     >
                       <span className="flex items-center justify-center w-8 h-8 rounded-full bg-geb-orange/10 text-geb-orange font-bold text-sm shrink-0">
                         {c.id}
                       </span>
                       <div className="flex flex-col min-w-0">
-                        <span className="text-sm font-semibold text-navy truncate">
+                        <span className="text-sm font-semibold text-ink truncate">
                           {c.titulo}
                         </span>
-                        <span className="text-xs text-navy/40 truncate">
+                        <span className="text-xs text-ink-faint truncate">
                           {c.artista}
                         </span>
                       </div>
-                      <span className="ml-auto text-navy/30 text-lg shrink-0">
+                      <span className="ml-auto text-ink-faint text-lg shrink-0">
                         ›
                       </span>
                     </Link>
@@ -128,7 +128,7 @@ export default function Home() {
 
       <footer className="mt-12 mb-6 flex flex-col items-center gap-4">
         <BotonInstalar />
-        <span className="text-xs text-navy/40 text-center">
+        <span className="text-xs text-ink-faint text-center">
           GEBUAMC · Trimestre 26-O
         </span>
       </footer>

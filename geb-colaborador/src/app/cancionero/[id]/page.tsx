@@ -19,8 +19,8 @@ export default async function CancionPage({
     : new URL(cancion.youtube).searchParams.get("v");
 
   return (
-    <div className="min-h-screen flex flex-col bg-cream">
-      <header className="sticky top-0 z-10 bg-navy px-4 py-4 shadow-md">
+    <div className="min-h-screen flex flex-col bg-bg">
+      <header className="sticky top-0 z-10 bg-header-bg px-4 py-4 shadow-md">
         <div className="max-w-lg mx-auto flex items-center gap-3">
           <Link
             href="/cancionero"
@@ -54,11 +54,11 @@ export default async function CancionPage({
           </div>
         )}
 
-        <div className="bg-white rounded-2xl shadow-sm border border-navy/10 p-5">
-          <h2 className="text-sm font-bold text-navy/40 uppercase tracking-wide mb-4">
+        <div className="bg-surface rounded-2xl shadow-sm border border-border p-5">
+          <h2 className="text-sm font-bold text-ink-faint uppercase tracking-wide mb-4">
             Letra
           </h2>
-          <div className="text-base leading-loose text-navy/80 whitespace-pre-line font-mono">
+          <div className="text-base leading-loose text-ink-2 whitespace-pre-line font-mono">
             {cancion.letra}
           </div>
         </div>
@@ -76,7 +76,7 @@ export default async function CancionPage({
         </a>
       </main>
 
-      <footer className="py-4 text-center text-xs text-navy/40">
+      <footer className="py-4 text-center text-xs text-ink-faint">
         GEBUAMC · Trimestre 26-O
       </footer>
     </div>

@@ -3,8 +3,8 @@ import { canciones } from "@/canciones";
 
 export default function CancioneroPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-cream">
-      <header className="sticky top-0 z-10 bg-navy px-4 py-4 shadow-md">
+    <div className="min-h-screen flex flex-col bg-bg">
+      <header className="sticky top-0 z-10 bg-header-bg px-4 py-4 shadow-md">
         <div className="max-w-md mx-auto flex items-center gap-3">
           <Link
             href="/"
@@ -20,7 +20,7 @@ export default function CancioneroPage() {
       </header>
 
       <main className="flex-1 w-full max-w-md mx-auto px-4 py-6 flex flex-col gap-3">
-        <p className="text-center text-sm text-navy/50 mb-2">
+        <p className="text-center text-sm text-ink-muted mb-2">
           16 cantos · 26 Otoño
         </p>
 
@@ -28,21 +28,21 @@ export default function CancioneroPage() {
           <Link
             key={cancion.id}
             href={`/cancionero/${cancion.id}`}
-            className="flex items-center gap-3 bg-white hover:bg-navy/5 rounded-2xl shadow-sm border border-navy/10 px-4 py-4 transition-all active:scale-[0.98]"
+            className="flex items-center gap-3 bg-surface hover:bg-surface-muted rounded-2xl shadow-sm border border-border px-4 py-4 transition-all active:scale-[0.98]"
           >
-            <span className="flex items-center justify-center w-9 h-9 rounded-full bg-navy/10 text-navy font-bold text-sm shrink-0">
+            <span className="flex items-center justify-center w-9 h-9 rounded-full bg-surface-muted text-ink font-bold text-sm shrink-0">
               {cancion.id}
             </span>
             <div className="flex flex-col min-w-0 flex-1">
-              <span className="font-semibold text-navy text-sm leading-tight truncate">
+              <span className="font-semibold text-ink text-sm leading-tight truncate">
                 {cancion.titulo}
               </span>
-              <span className="text-xs text-navy/50 truncate">
+              <span className="text-xs text-ink-muted truncate">
                 {cancion.artista}
               </span>
             </div>
             <svg
-              className="w-5 h-5 text-navy/30 shrink-0"
+              className="w-5 h-5 text-ink-faint shrink-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -78,13 +78,13 @@ export default function CancioneroPage() {
             </svg>
             Descargar Cancionero (PDF)
           </a>
-          <p className="text-xs text-navy/40 text-center">
+          <p className="text-xs text-ink-faint text-center">
             Archivo PDF con acordes y letras
           </p>
         </div>
       </main>
 
-      <footer className="py-4 text-center text-xs text-navy/40">
+      <footer className="py-4 text-center text-xs text-ink-faint">
         GEBUAMC · Trimestre 26-O
       </footer>
     </div>

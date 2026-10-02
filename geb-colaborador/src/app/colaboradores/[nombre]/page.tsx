@@ -5,7 +5,7 @@ import Instrucciones from "./instrucciones";
 
 const areaColors: Record<string, string> = {
   Multimedia: "bg-geb-orange/10 text-geb-orange-dark border-geb-orange/30",
-  "Exposición Bíblica": "bg-navy/10 text-navy border-navy/30",
+  "Exposición Bíblica": "bg-surface-muted text-ink border-border",
   Alabanza: "bg-green-100 text-green-800 border-green-300",
 };
 
@@ -31,7 +31,7 @@ export default async function ColaboradorPage({
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-cream">
+    <div className="min-h-screen flex flex-col bg-bg">
       <header className="sticky top-0 z-10 bg-geb-orange px-4 py-4 shadow-md">
         <div className="max-w-md mx-auto flex items-center gap-3">
           <Link
@@ -49,14 +49,14 @@ export default async function ColaboradorPage({
 
       <main className="flex-1 w-full max-w-md mx-auto px-4 py-6 flex flex-col gap-4">
         {colaborador.semanas.length === 0 ? (
-          <p className="text-center text-navy/50 mt-12">
+          <p className="text-center text-ink-muted mt-12">
             No hay asignaciones para este colaborador.
           </p>
         ) : (
           colaborador.semanas.map((sem) => (
             <div
               key={sem.semana}
-              className="bg-white rounded-2xl shadow-sm border border-navy/10 overflow-hidden"
+              className="bg-surface rounded-2xl shadow-sm border border-border overflow-hidden"
             >
               <div className="bg-navy px-4 py-3">
                 <h2 className="text-white font-bold text-lg">
@@ -100,7 +100,7 @@ export default async function ColaboradorPage({
         )}
       </main>
 
-      <footer className="py-4 text-center text-xs text-navy/40">
+      <footer className="py-4 text-center text-xs text-ink-faint">
         GEBUAMC · Trimestre 26-O
       </footer>
     </div>

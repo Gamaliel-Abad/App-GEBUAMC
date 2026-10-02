@@ -4,7 +4,7 @@ import { colaboradores } from "@/data";
 
 export default function ColaboradoresHome() {
   return (
-    <div className="min-h-screen flex flex-col bg-cream">
+    <div className="min-h-screen flex flex-col bg-bg">
       <header className="sticky top-0 z-10 bg-geb-orange px-4 py-4 shadow-md">
         <div className="max-w-md mx-auto flex items-center gap-3">
           <Link
@@ -32,7 +32,7 @@ export default function ColaboradoresHome() {
         ))}
       </main>
 
-      <footer className="py-4 text-center text-xs text-navy/40">
+      <footer className="py-4 text-center text-xs text-ink-faint">
         GEBUAMC · Trimestre 26-O
       </footer>
     </div>

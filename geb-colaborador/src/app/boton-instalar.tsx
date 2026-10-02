@@ -55,7 +55,7 @@ export default function BotonInstalar() {
     <div className="flex flex-col items-center gap-2">
       <button
         onClick={instalar}
-        className="flex items-center gap-1.5 text-[11px] text-navy/40 hover:text-navy/70 underline underline-offset-2 transition-colors cursor-pointer"
+        className="flex items-center gap-1.5 text-[11px] text-ink-faint hover:text-ink-2 underline underline-offset-2 transition-colors cursor-pointer"
       >
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -69,12 +69,12 @@ export default function BotonInstalar() {
       </button>
 
       {instrucciones && !prompt && (
-        <div className="bg-white rounded-xl border border-navy/10 px-4 py-3 max-w-xs text-center">
-          <p className="text-xs text-navy/60 leading-relaxed">
+        <div className="bg-surface rounded-xl border border-border px-4 py-3 max-w-xs text-center">
+          <p className="text-xs text-ink-2 leading-relaxed">
             Abre el menú del navegador
             <span className="font-bold"> ⋮ </span>
             y elige{" "}
-            <span className="font-semibold text-navy">
+            <span className="font-semibold text-ink">
               «Instalar aplicación»
             </span>{" "}
             o «Agregar a pantalla de inicio».
