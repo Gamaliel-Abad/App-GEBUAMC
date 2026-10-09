@@ -5,15 +5,15 @@ import BotonInstalar from "./boton-instalar";
 
 // ═══════════════════════════════════════════════
 // CAMBIA EL TÍTULO DE LA ENSEÑANZA AQUÍ:
-const ENSENANZA_TITULO = "Confía en el Rey";
-const ENSENANZA_REFERENCIA = "Mateo 13:24-30";
+const ENSENANZA_TITULO = "La oveja perdida";
+const ENSENANZA_REFERENCIA = "Lucas 15";
 const ENSENANZA_FECHA = "Trimestre 26-O — Semana Actual";
 // ═══════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════
 // PON LOS 3 CANTOS AQUÍ (por su ID del cancionero):
 
-const CANTOS_SEMANA = ["3", "4", "10"];
+const CANTOS_SEMANA = ["3", "1", "8"];
 // ═══════════════════════════════════════════════
 
 const cantosSeleccionados = CANTOS_SEMANA.map(
